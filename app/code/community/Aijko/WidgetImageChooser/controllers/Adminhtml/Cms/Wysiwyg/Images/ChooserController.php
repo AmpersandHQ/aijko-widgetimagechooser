@@ -7,7 +7,9 @@
  * @author      Gerrit Pechmann <gp@aijko.de>
  * @copyright   Copyright (c) 2012 aijko GmbH (http://www.aijko.de)
  */
-require_once  'Mage/Adminhtml/controllers/Cms/Wysiwyg/ImagesController.php';
+if (!class_exists('Mage_Adminhtml_Cms_Wysiwyg_ImagesController', false)) {
+    require_once Mage::getConfig()->getModuleDir('controllers', 'Mage_Adminhtml') . '/Cms/Wysiwyg/ImagesController.php';
+}
 
 class Aijko_WidgetImageChooser_Adminhtml_Cms_Wysiwyg_Images_ChooserController extends Mage_Adminhtml_Cms_Wysiwyg_ImagesController
 {
